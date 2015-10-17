@@ -1,0 +1,2 @@
+patching file libxslt/libxslt.h
+patching file libxslt/win32config.h
