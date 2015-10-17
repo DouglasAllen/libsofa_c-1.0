@@ -1,6 +1,7 @@
 require "mini_portile"
 require 'mkmf'
-ROOT = File.expand_path(File.join(File.dirname(__FILE__), '..', '..'))
+#ROOT = File.expand_path(File.join(File.dirname(__FILE__), '..', '..'))
+ROOT = File.expand_path('../', __FILE__)
 #recipe1 = MiniPortile.new("libsofa_c", "1.0")
 #recipe1.files = ["https://github.com/DouglasAllen/libsofa_c-1.0/raw/master/libsofa_c-1.0.tar"]
 #recipe1.download
@@ -114,7 +115,7 @@ def process_recipe(name, version, static_p, cross_p)
 ************************************************************************
     EOS
 
-    checkpoint = "#{recipe.target}/#{recipe.name}-#{recipe.version}-#{recipe.host}.installed"
+    p checkpoint = "#{recipe.target}/#{recipe.name}-#{recipe.version}-#{recipe.host}.installed"
     unless File.exist?(checkpoint)
       #recipe.cook
       recipe.download
